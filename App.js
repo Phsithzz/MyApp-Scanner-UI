@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, View } from "react-native";
+
+//style
+import styles from "./style/styles";
+//style
+
+//component
+import Headbar from "./components/Headbar";
+import Message from "./components/Message";
+import Product from "./components/Product";
+import AskSearch from "./components/AskSearch";
+import BottomScreen from "./components/BottomScreen";
+//component
 
 export default function App() {
   return (
+    <ScrollView>
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Headbar />
+      <Message />
+      <Product />
+      <AskSearch />
+      <BottomScreen />
     </View>
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
